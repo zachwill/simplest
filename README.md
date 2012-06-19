@@ -20,6 +20,9 @@ Usage
 
 >>> r = Redis(db="test")
 
+>>> r['abc'] is None
+True
+
 >>> r['abc'] = (1, 2, 3)
 
 >>> print r['abc']
