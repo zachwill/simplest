@@ -12,7 +12,7 @@ except ImportError:
 
 setup(
     name="simplest",
-    version="0.2",
+    version="0.2.1",
     description="Working with Redis should be simple and Pythonic.",
     author="Zach Williams",
     author_email="hey@zachwill.com",
