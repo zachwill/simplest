@@ -12,12 +12,12 @@ except ImportError:
 
 setup(
     name="simplest",
-    version="0.1",
+    version="0.2",
     description="Working with Redis should be simple and Pythonic.",
     author="Zach Williams",
     author_email="hey@zachwill.com",
     keywords=['redis', 'simplest', 'zach will', 'simple'],
-    url="http://github.com/zachwill/dribbble",
+    url="http://github.com/zachwill/simplest",
     license="MIT",
     classifiers=[
         'Development Status :: 4 - Beta',
