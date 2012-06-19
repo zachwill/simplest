@@ -26,6 +26,8 @@ class Redis(StrictRedis):
 
     def __setitem__(self, name, value):
         """Setting values should be easy."""
+        if self.type(name) != 'none':
+            del self[name]
         if isinstance(value, list) or isinstance(value, tuple):
             for item in value:
                 length = self.rpush(name, item)

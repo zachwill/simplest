@@ -23,15 +23,18 @@ Usage
 >>> r['abc'] is None
 True
 
+>>> r['abc'] = 'xyz'
+
+>>> r['abc']
+'xyz'
+
 >>> r['abc'] = (1, 2, 3)
 
->>> print r['abc']
+>>> r['abc']
 ['1', '2', '3']
-
->>> del r['abc']
 
 >>> r['abc'] = set([1, 2, 3])
 
->>> print r['abc']
+>>> r['abc']
 set([1, 2, 3])
 ```
