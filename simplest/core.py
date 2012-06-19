@@ -23,3 +23,17 @@ class Redis(StrictRedis):
             return self.zrange(name, 0, -1)
         else:
             return None
+
+    def __setitem__(self, name, value):
+        """Setting values should be easy."""
+        if isinstance(value, list) or isinstance(value, tuple):
+            for item in value:
+                length = self.rpush(name, item)
+            return length
+        elif isinstance(value, set):
+            for item in value:
+                length = self.sadd(name, item)
+            return length
+        elif isinstance(value, dict):
+            return self.hmset(name, value)
+        return self.set(name, value)

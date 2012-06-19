@@ -19,4 +19,16 @@ Usage
 >>> from simplest import Redis
 
 >>> r = Redis(db="test")
+
+>>> r['abc'] = (1, 2, 3)
+
+>>> print r['abc']
+['1', '2', '3']
+
+>>> del r['abc']
+
+>>> r['abc'] = set([1, 2, 3])
+
+>>> print r['abc']
+set([1, 2, 3])
 ```
